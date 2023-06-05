@@ -2,16 +2,17 @@ package main
 
 import (
 	"log"
-	"yaonkey/inhouse/pkg/database"
-	"yaonkey/inhouse/pkg/models"
+	"net/http"
+	"yaonkey/inhouse/pkg/routes"
+
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	err := database.Connect()
-	if err != nil {
-		log.Fatal(err)
-	}
-	db := database.GetDB()
-	db.Create(&models.Admin{})
-	db.Create(&models.Site{})
+	r := mux.NewRouter()
+	routes.RegisterRoutes(r)
+	http.Handle("/", r)
+
+	log.Printf("Server running on http://127.0.0.1:8989/")
+	log.Fatal(http.ListenAndServe(":8989", r))
 }

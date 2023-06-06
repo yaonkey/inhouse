@@ -40,3 +40,26 @@ func (s *Site) GetMaxTime() (err error) {
 
 	return
 }
+
+// Позволяет обновить время доступа к сайту
+func (s *Site) UpdateTime(newTime int64) (err error) {
+	db, err := database.Connect()
+	if err != nil {
+		return
+	}
+	s.Time = time.Duration(newTime)
+	db.Save(&s)
+
+	return
+}
+
+// Позволяет получить список всех сайтов
+func GetAllSites() (Sites, error) {
+	var sites Sites
+	db, err := database.Connect()
+	if err != nil {
+		return nil, err
+	}
+	db.Find(&sites)
+	return sites, nil
+}

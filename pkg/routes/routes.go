@@ -15,6 +15,9 @@ import (
 var RegisterRoutes = func(router *mux.Router) {
 	router.HandleFunc("/min/", controllers.GetMinTimeSite).Methods("GET")
 	router.HandleFunc("/max/", controllers.GetMaxTimeSite).Methods("GET")
+	// Так как клиентская часть отсутствует, где формировался бы хеш,
+	// можно использовать запрос с прописанным телом
+	// из корня в файле admin.http
 	router.HandleFunc("/stats/", controllers.GetAdminStatistics).Methods("POST")
 	router.HandleFunc("/{sitename}/", controllers.GetSiteTime).Methods("GET")
 }

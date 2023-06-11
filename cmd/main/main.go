@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	"net/http"
-	"yaonkey/inhouse/pkg/routes"
-	"yaonkey/inhouse/pkg/workers"
+	"yaonkey/inhouse/internal/routes"
+	"yaonkey/inhouse/internal/workers"
 
 	"github.com/gorilla/mux"
 )

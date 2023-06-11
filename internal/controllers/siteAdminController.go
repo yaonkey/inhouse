@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
-	"yaonkey/inhouse/pkg/models"
+	"yaonkey/inhouse/internal/models"
 	"yaonkey/inhouse/pkg/utils"
 )
 

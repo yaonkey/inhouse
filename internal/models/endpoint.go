@@ -1,6 +1,6 @@
 package models
 
-import "yaonkey/inhouse/pkg/database"
+import "yaonkey/inhouse/internal/database"
 
 // Модель эндпоита, содержащая url
 // и общее количество запросов count к эндпоинту

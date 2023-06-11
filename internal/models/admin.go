@@ -1,7 +1,7 @@
 package models
 
 import (
-	"yaonkey/inhouse/pkg/database"
+	"yaonkey/inhouse/internal/database"
 )
 
 // Модель администратора, содержащая

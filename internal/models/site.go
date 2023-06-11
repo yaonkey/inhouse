@@ -2,7 +2,7 @@ package models
 
 import (
 	"time"
-	"yaonkey/inhouse/pkg/database"
+	"yaonkey/inhouse/internal/database"
 )
 
 // Модель сайта, содержащая url сайта

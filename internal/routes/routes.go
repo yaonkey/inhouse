@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"yaonkey/inhouse/pkg/controllers"
+	"yaonkey/inhouse/internal/controllers"
 
 	"github.com/gorilla/mux"
 )

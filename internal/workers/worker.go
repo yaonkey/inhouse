@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"sync"
 	"time"
-	"yaonkey/inhouse/pkg/models"
+	"yaonkey/inhouse/internal/models"
 )
 
 // Функция, запускающая воркер,

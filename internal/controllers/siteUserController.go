@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"net/http"
-	"yaonkey/inhouse/pkg/models"
+	"yaonkey/inhouse/internal/models"
 	"yaonkey/inhouse/pkg/utils"
 
 	"github.com/gorilla/mux"
